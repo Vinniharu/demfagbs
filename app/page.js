@@ -240,7 +240,7 @@ export default function Home() {
               </h2>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
                 With years of experience in financial services, we understand the unique challenges faced by Nigerian businesses. 
-                Our commitment goes beyond just providing loans - we're your partners in growth.
+                Our commitment goes beyond just providing loans - we&apos;re your partners in growth.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-8">
