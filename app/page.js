@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center relative overflow-hidden">
+      <section className="min-h-screen flex items-center relative overflow-hidden py-8 md:py-0">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-700"></div>
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 opacity-20">
