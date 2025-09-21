@@ -93,16 +93,16 @@ export default function Home() {
               {/* Stats Row */}
               <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                  <div className="text-4xl font-bold text-white mb-2">₦2.1M</div>
+                  <div className="text-4xl font-bold text-white mb-2">₦10M</div>
                   <p className="text-emerald-200 text-sm">Disbursed in First 48 Hours</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                  <div className="text-4xl font-bold text-white mb-2">50+</div>
+                  <div className="text-4xl font-bold text-white mb-2">100+</div>
                   <p className="text-emerald-200 text-sm">Active Customers</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl font-bold text-white mb-2">27+</div>
-                  <p className="text-emerald-200 text-sm">Years Banking Experience</p>
+                  <p className="text-emerald-200 text-sm">Years of Experience</p>
                 </div>
               </div>
             </div>
