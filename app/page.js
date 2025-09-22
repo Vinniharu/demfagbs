@@ -94,7 +94,7 @@ export default function Home() {
               <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl font-bold text-white mb-2">₦10M</div>
-                  <p className="text-emerald-200 text-sm">Disbursed in First 48 Hours</p>
+                  <p className="text-emerald-200 text-sm">Disbursed in 1st month</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl font-bold text-white mb-2">100+</div>
@@ -129,7 +129,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Excellence</h3>
               <p className="text-gray-700">
-                Led by seasoned banking professionals with over 27 years of combined experience from top-tier institutions including First Bank, Zenith Bank, and Ecobank.
+                Led by seasoned professionals with over 27 years of combined experience from top-tier institutions including First Bank, Zenith Bank, and Ecobank.
               </p>
             </div>
 
@@ -139,7 +139,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Rapid Service Delivery</h3>
               <p className="text-gray-700">
-                Within our first 48 hours of operation, we successfully disbursed ₦2.1 million in loans to support local businesses and entrepreneurs.
+                Within our first month of operation, we successfully disbursed ₦10 million in loans to support local businesses and entrepreneurs.
               </p>
             </div>
 
@@ -240,16 +240,16 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-6">Our Impact in Numbers</h3>
               <div className="space-y-6">
                 <div>
-                  <div className="text-4xl font-bold">₦2.1 Million</div>
-                  <p className="text-emerald-100">Disbursed in first 48 hours</p>
+                  <div className="text-4xl font-bold">₦10 Million</div>
+                  <p className="text-emerald-100">Disbursed within 1st month of operation</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold">50+ Customers</div>
+                  <div className="text-4xl font-bold">100+ Customers</div>
                   <p className="text-emerald-100">Currently serving and growing</p>
                 </div>
                 <div>
                   <div className="text-4xl font-bold">₦300 Million</div>
-                  <p className="text-emerald-100">Projected loan book growth within 12 months</p>
+                  <p className="text-emerald-100">loan projected to be booked within 12 months of operations</p>
                 </div>
               </div>
             </div>
