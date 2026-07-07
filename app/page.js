@@ -50,7 +50,7 @@ export default function Home() {
     { name: 'Sakariyah Kehinde', role: 'Head Operations', initials: 'SK' },
     { name: 'Lawal Rasak Bolaji', role: 'Head IT', initials: 'LB' },
     { name: 'Similoluwa Fagbelu', role: 'Compliance', initials: 'SF' },
-    { name: 'Oluwanifemi Fagbelu', role: 'Tech Support', initials: 'OF' },
+    // { name: 'Oluwanifemi Fagbelu', role: 'Tech Support', initials: 'OF' },
   ];
 
   return (
