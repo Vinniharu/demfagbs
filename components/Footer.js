@@ -23,7 +23,7 @@ export default function Footer() {
     'Patricia A. Fagbelu — Deputy MD',
     'Anna George Oba — Business Dev.',
     'Sakariyah K. Kehinde — Operations',
-    'Lawal Rasak Bolaji — Head IT',
+    'Lawal Rasak Bolaji — Consultancy Technology',
     'Similoluwa B. Fagbelu — Compliance',
     'Oluwanifemi S. Fagbelu — Tech Support',
   ];

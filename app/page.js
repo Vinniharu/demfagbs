@@ -48,7 +48,7 @@ export default function Home() {
     { name: 'Patricia Fagbelu', role: 'Deputy MD', initials: 'PF' },
     { name: 'Anna George Oba', role: 'Business Dev.', initials: 'AO' },
     { name: 'Sakariyah Kehinde', role: 'Head Operations', initials: 'SK' },
-    { name: 'Lawal Rasak Bolaji', role: 'Head IT', initials: 'LB' },
+    { name: 'Lawal Rasak Bolaji', role: 'Consultancy Technology', initials: 'LB' },
     { name: 'Similoluwa Fagbelu', role: 'Compliance', initials: 'SF' },
     // { name: 'Oluwanifemi Fagbelu', role: 'Tech Support', initials: 'OF' },
   ];

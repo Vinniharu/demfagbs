@@ -79,11 +79,11 @@ export default function Team() {
     {
       name: 'Lawal Rasak Bolaji',
       credentials: 'MSc, MNIM, AIMS, MCIB, CSD, PMP',
-      role: 'Head, Information Technology',
+      role: 'Consultancy Technology',
       photo: null,
       bio: [
         `Lawal Rasak Bolaji is a seasoned technology executive, fintech strategist, cybersecurity professional, and project management expert with over 20 years of experience in banking, fintech, microfinance, risk management, and digital transformation.`,
-        `He is the Head of our Information Technology department and CEO of GrubiesCore Payments Limited, which is the banking software powering Demfagbs Global Finance. He also leads the development of innovative fintech solutions, including payment gateways, digital banking platforms, core banking systems, and API integration services. Throughout his career, he has held executive leadership positions such as Chief Technology Officer (CTO), Chief Risk Officer (CRO), and Project Manager, driving digital transformation, enterprise technology modernization, cybersecurity, and financial inclusion initiatives.`,
+        `He heads our Consultancy Technology and is CEO of GrubiesCore Payments Limited, which is the banking software powering Demfagbs Global Finance. He also leads the development of innovative fintech solutions, including payment gateways, digital banking platforms, core banking systems, and API integration services. Throughout his career, he has held executive leadership positions such as Chief Technology Officer (CTO), Chief Risk Officer (CRO), and Project Manager, driving digital transformation, enterprise technology modernization, cybersecurity, and financial inclusion initiatives.`,
         `Mr. Lawal has extensive expertise in fintech architecture, software development, cloud computing, cybersecurity, enterprise risk management, project management, and digital banking. He has successfully delivered large-scale projects involving core banking implementations, payment integrations, cloud infrastructure, business process automation, and agency banking solutions while leading multidisciplinary teams and managing complex technology portfolios.`,
         `He holds a Master's degree in Information Technology and a Bachelor's degree in Computer Science, complemented by professional certifications and memberships in project management, banking, cybersecurity, and management. Recognized for aligning technology with business strategy, Mr. Lawal has consistently enabled organizations to enhance operational efficiency, strengthen regulatory compliance, improve customer experience, and achieve sustainable growth through innovative digital solutions.`
       ],
