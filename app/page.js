@@ -45,11 +45,12 @@ export default function Home() {
 
   const team = [
     { name: 'Ademola Fagbelu', role: 'MD / CEO', initials: 'AF' },
+    { name: 'Patricia Fagbelu', role: 'Deputy MD', initials: 'PF' },
     { name: 'Anna George Oba', role: 'Business Dev.', initials: 'AO' },
     { name: 'Sakariyah Kehinde', role: 'Head Operations', initials: 'SK' },
     { name: 'Lawal Rasak Bolaji', role: 'Head IT', initials: 'LB' },
-    { name: 'Patricia Fagbelu', role: 'Deputy MD', initials: 'PF' },
     { name: 'Similoluwa Fagbelu', role: 'Compliance', initials: 'SF' },
+    { name: 'Oluwanifemi Fagbelu', role: 'Tech Support', initials: 'OF' },
   ];
 
   return (

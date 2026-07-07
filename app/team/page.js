@@ -27,6 +27,22 @@ export default function Team() {
       ],
     },
     {
+      name: 'Mrs Patricia Abolade Fagbelu',
+      credentials: 'HND',
+      role: 'Head, Human Resources & Admin / Deputy Managing Director',
+      photo: null,
+      bio: [
+        `Mrs Patricia Abolade Fagbelu is a graduate of Business Administration and Management from Federal Polytechnic, Offa, Kwara State (HND, 2001). During her National Youth Service Corps (NYSC), she completed her primary assignment at First Bank of Nigeria, Marina, Lagos. She is currently the Head, Human Resources and Admin of Demfagbs Global Finance, responsible for the Human Resources department and general administration.`,
+        `Prior to her current position, she is a seasoned entrepreneur with over 20 years of post-graduation experience as the Chief Executive Officer of BOLFAGBS DYNAMIC VENTURES, a company engaged in the sales, distribution, and marketing of fast-moving consumer goods (FMCG) along the Lagos/Ibadan expressway corridor. She is well knowledgeable in general administration and operational management, and is a focused, goal-getter, and target-driven executive. Mrs Patricia Abolade Fagbelu also serves on the Board of Demfagbs Global Finance and Co. Ltd as the Deputy Managing Director.`
+      ],
+      highlights: [
+        'Deputy Managing Director & Board Member',
+        '20+ years entrepreneurial & executive leadership',
+        'CEO of Bolfagbs Dynamic Ventures (FMCG distribution)',
+        'Business Administration & Management (HND)'
+      ],
+    },
+    {
       name: 'Mrs Anna George Oba',
       credentials: 'HND, BSc',
       role: 'Manager, Business Development',
@@ -76,22 +92,6 @@ export default function Team() {
         'CEO of GrubiesCore Payments Limited (GRUBIES Software)',
         'Expertise in core banking, APIs & cybersecurity',
         'MSc Information Technology & Certified PMP'
-      ],
-    },
-    {
-      name: 'Mrs Patricia Abolade Fagbelu',
-      credentials: 'HND',
-      role: 'Head, Human Resources & Admin / Deputy Managing Director',
-      photo: null,
-      bio: [
-        `Mrs Patricia Abolade Fagbelu is a graduate of Business Administration and Management from Federal Polytechnic, Offa, Kwara State (HND, 2001). During her National Youth Service Corps (NYSC), she completed her primary assignment at First Bank of Nigeria, Marina, Lagos. She is currently the Head, Human Resources and Admin of Demfagbs Global Finance, responsible for the Human Resources department and general administration.`,
-        `Prior to her current position, she is a seasoned entrepreneur with over 20 years of post-graduation experience as the Chief Executive Officer of BOLFAGBS DYNAMIC VENTURES, a company engaged in the sales, distribution, and marketing of fast-moving consumer goods (FMCG) along the Lagos/Ibadan expressway corridor. She is well knowledgeable in general administration and operational management, and is a focused, goal-getter, and target-driven executive. Mrs Patricia Abolade Fagbelu also serves on the Board of Demfagbs Global Finance and Co. Ltd as the Deputy Managing Director.`
-      ],
-      highlights: [
-        'Deputy Managing Director & Board Member',
-        '20+ years entrepreneurial & executive leadership',
-        'CEO of Bolfagbs Dynamic Ventures (FMCG distribution)',
-        'Business Administration & Management (HND)'
       ],
     },
     {

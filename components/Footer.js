@@ -20,10 +20,10 @@ export default function Footer() {
 
   const leadership = [
     'Ademola Fagbelu — MD/CEO',
+    'Patricia A. Fagbelu — Deputy MD',
     'Anna George Oba — Business Dev.',
     'Sakariyah K. Kehinde — Operations',
     'Lawal Rasak Bolaji — Head IT',
-    'Patricia A. Fagbelu — Deputy MD',
     'Similoluwa B. Fagbelu — Compliance',
     'Oluwanifemi S. Fagbelu — Tech Support',
   ];
