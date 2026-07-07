@@ -1,395 +1,183 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Contact() {
-  const [activeTab, setActiveTab] = useState('loan');
+  const [openFaq, setOpenFaq] = useState(0);
 
   const faqs = [
     {
-      question: 'What is the minimum and maximum loan amount?',
-      answer: 'We offer loans ranging from ₦100,000 to ₦5,000,000, depending on your business needs and capacity.'
+      q: 'What loan amounts are available?',
+      a: 'We offer structured credit from ₦100,000 to ₦5,000,000 for individual traders and MSMEs. Group and cooperative lending can be structured differently based on collective requirements.',
     },
     {
-      question: 'How quickly can I receive my loan?',
-      answer: 'Our efficient processing system enables disbursement within 48-72 hours of approval, subject to complete documentation.'
+      q: 'How quickly can I receive my loan after applying?',
+      a: 'Our credit assessment team operates with a 48–72 hour turnaround from receipt of complete documentation. Many applications are assessed and approved faster for returning borrowers.',
     },
     {
-      question: 'What are your interest rates?',
-      answer: 'Our competitive rates are determined based on loan amount, duration, and risk assessment. Contact us for personalized quotes.'
+      q: 'What documents do I need to apply?',
+      a: 'For individual traders: a valid government ID, proof of address, and evidence of business activity (3-month bank statement or daily sales record). For MSMEs: business registration documents, 6-month bank statement, and a brief business profile.',
     },
     {
-      question: 'Do you require collateral?',
-      answer: 'Collateral requirements depend on loan amount and type. We also offer unsecured loan options for qualified applicants.'
+      q: 'Do I need collateral to get a loan?',
+      a: 'Collateral requirements depend on loan size and risk profile. We offer both secured and guarantor-backed credit options. For smaller working capital loans, collateral may not be required.',
     },
     {
-      question: 'Can I apply if my business is new?',
-      answer: 'Yes! We support new and existing businesses. Our team will assess your business plan and potential for success.'
+      q: 'What are your interest rates and repayment terms?',
+      a: 'Interest rates are risk-adjusted and competitive, with repayment tenors from 7 to 90 days aligned to your business cash flow. Full pricing is disclosed transparently before loan agreement.',
     },
     {
-      question: 'What areas do you serve?',
-      answer: 'We primarily serve the Lagos-Ibadan Expressway corridor, including Magboro, Arepo, Ibafo, Mowe, Ofada, and surrounding areas.'
-    }
-  ];
-
-  const services = [
-    { icon: '💰', title: 'Microloans & MSME Financing', desc: 'Quick loan processing with amounts from ₦100,000 - ₦5,000,000' },
-    { icon: '💼', title: 'Business Advisory Services', desc: 'Strategic planning and financial literacy education' },
-    { icon: '🏦', title: 'Savings & Investment Services', desc: 'Cooperative savings programs and investment advisory' },
-    { icon: '🔧', title: 'Specialized Services', desc: 'Debt management, property development, and project finance' }
+      q: 'Which areas do you currently serve?',
+      a: 'We are actively serving clients along the Lagos-Ibadan Expressway corridor — including Magboro, Arepo, Mowe, Ibafo, Ofada, and surrounding communities in Ogun State. Lagos expansion is actively underway.',
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-700 text-white py-24 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundRepeat: 'repeat'
-          }} />
-        </div>
-        <div className="container mx-auto px-6 relative z-10">
-          <h1 className="text-5xl lg:text-6xl font-bold mb-6">Contact DEMFAGBS Global Finance</h1>
-          <p className="text-2xl text-white/90 max-w-4xl">
-            Get in Touch with Nigeria&apos;s Premier Microfinance Partner
+    <div className="min-h-screen bg-white">
+
+      {/* HERO */}
+      <section className="relative bg-slate-950 py-24 lg:py-36 overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white opacity-[0.03]"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[400px] bg-gradient-to-tr from-emerald-600/15 to-transparent rounded-full blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-xs font-bold uppercase tracking-widest mb-6 mx-auto">
+            We&apos;re Ready to Help
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto">
+            Get in{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
+              Touch
+            </span>
+          </h1>
+          <p className="text-base sm:text-lg text-slate-300 mt-6 max-w-2xl leading-relaxed mx-auto">
+            Whether you&apos;re a business owner looking for financing or a partner interested in working with us, we invite you to reach out through our direct channels or visit our office.
           </p>
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">We&apos;re Here to Help</h2>
-              <p className="text-xl text-gray-600">
-                Ready to take your business to the next level? Contact us today for a free consultation.
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-3 gap-8 mb-16">
-              <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-8 text-center">
-                <div className="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6">
-                  📍
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Visit Our Office</h3>
-                <p className="text-gray-700">
-                  No. 3, Ifelodun Avenue, Off Magboro Road<br />
-                  Beside Wise Buyers Supermarket<br />
-                  Magboro, Ogun State, Nigeria
-                </p>
-                <p className="text-sm text-gray-600 mt-4">
-                  Easily accessible via Lagos-Ibadan Expressway
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6">
-                  📧
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Email Us</h3>
-                <a href="mailto:demfagbsglobal@gmail.com" className="text-blue-600 hover:text-blue-800 font-medium">
-                  demfagbsglobal@gmail.com
-                </a>
-                <p className="text-sm text-gray-600 mt-4">
-                  We respond within 24 hours
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center">
-                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6">
-                  ⏰
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Business Hours</h3>
-                <ul className="text-gray-700 space-y-2">
-                  <li><strong>Mon - Fri:</strong> 8:00 AM - 5:00 PM</li>
-                  <li><strong>Saturday:</strong> 9:00 AM - 2:00 PM</li>
-                  <li><strong>Sunday:</strong> Closed</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Map/Directions */}
-            <div className="bg-gray-50 rounded-3xl p-12">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">How to Find Us</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-4">Directions</h4>
-                  <p className="text-gray-700 mb-4">
-                    Located on Ifelodun Avenue, just off Magboro Road, beside the popular Wise Buyers Supermarket.
-                    Easily accessible via public transportation or private vehicle with ample parking available.
-                  </p>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>• From Lagos: Take Lagos-Ibadan Expressway, exit at Magboro</li>
-                    <li>• From Ibadan: Take Lagos-Ibadan Expressway, exit at Magboro</li>
-                    <li>• Landmarks: Wise Buyers Supermarket, Magboro Market</li>
-                  </ul>
-                </div>
-                <div className="bg-white rounded-xl p-8 shadow-md">
-                  <div className="aspect-video bg-emerald-100 rounded-lg overflow-hidden">
-                    <img
-                      src="/shop.jpg"
-                      alt="DEMFAGBS Global Finance Office Location - Magboro, Ogun State"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="text-center mt-4">
-                    <p className="text-emerald-700 font-medium">Our Office in Magboro, Ogun State</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Services We Offer</h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-700 text-sm">{service.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How to Apply */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">How to Apply for a Loan</h2>
-
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-8 mb-16">
-              {[
-                { step: '1', title: 'Initial Consultation', desc: 'Contact us to discuss your financing needs' },
-                { step: '2', title: 'Application Submission', desc: 'Submit your application with required documents' },
-                { step: '3', title: 'Quick Assessment', desc: 'Rapid assessment within 24-48 hours' },
-                { step: '4', title: 'Funds Disbursement', desc: 'Receive funds directly to your account' }
-              ].map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                    {step.step}
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-gray-600 text-sm">{step.desc}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Required Documentation Tabs */}
-            <div className="bg-gray-50 rounded-3xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Required Documentation</h3>
-
-              <div className="flex justify-center gap-4 mb-8">
-                <button
-                  onClick={() => setActiveTab('loan')}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                    activeTab === 'loan'
-                      ? 'bg-emerald-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-100'
-                  }`}
-                >
-                  Individual Loans
-                </button>
-                <button
-                  onClick={() => setActiveTab('msme')}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                    activeTab === 'msme'
-                      ? 'bg-emerald-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-100'
-                  }`}
-                >
-                  MSME Loans
-                </button>
-              </div>
-
-              <div className="bg-white rounded-2xl p-8">
-                {activeTab === 'loan' ? (
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-700">Valid government-issued ID (National ID, Driver&apos;s License, or International Passport)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-700">Proof of address (utility bill or tenancy agreement)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-700">Bank statement (last 3 months)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-700">Business registration documents (if applicable)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-700">Proof of income or business income records</span>
-                    </li>
-                  </ul>
-                ) : (
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-700">Certificate of business registration</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-700">Valid identification of directors/owners</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-700">Business financial statements</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-700">Bank statements (last 6 months)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-700">Business plan or project proposal</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-700">Collateral documentation (if required)</span>
-                    </li>
-                  </ul>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Frequently Asked Questions</h2>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-md">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Partnership & Investment */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-10">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Partnership Opportunities</h2>
-              <p className="text-gray-700 mb-6">
-                We welcome partnerships with community organizations, business development agencies, financial advisors, and educational institutions.
-              </p>
-              <h3 className="font-bold text-gray-900 mb-4">Benefits of Partnership:</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Revenue sharing opportunities</li>
-                <li>• Professional development and training</li>
-                <li>• Access to our customer network</li>
-                <li>• Joint marketing and promotional activities</li>
-                <li>• Collaborative business development</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-10">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Investor Relations</h2>
-              <p className="text-gray-700 mb-6">
-                We are actively seeking strategic investors and debt capital providers who share our vision of financial inclusion.
-              </p>
-              <h3 className="font-bold text-gray-900 mb-4">Investment Opportunities:</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Debt capital: ₦300 million target</li>
-                <li>• Attractive returns on investment</li>
-                <li>• Social impact through financial inclusion</li>
-                <li>• Professional management team</li>
-                <li>• Transparent reporting and governance</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-700 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundRepeat: 'repeat'
-          }} />
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Start Your Application Today
-          </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Take the first step towards growing your business. Our team is ready to help you succeed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:demfagbsglobal@gmail.com"
-              className="bg-white text-emerald-700 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Email Us Now
-            </a>
-            <button
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-emerald-700 transition-colors inline-flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Schedule Consultation
-            </button>
-          </div>
-
-          <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Visit Us Today</h3>
-            <p className="text-white/90">
-              No. 3, Ifelodun Avenue, Off Magboro Road<br />
-              Beside Wise Buyers Supermarket<br />
-              Magboro, Ogun State, Nigeria
+      {/* DIRECT CHANNELS SECTION */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto text-center mb-16">
+            <h2 className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">Direct Channels</h2>
+            <h3 className="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">How to Reach Us</h3>
+            <p className="text-base text-slate-500 mt-4 leading-relaxed">
+              Our team is available during business hours to answer questions, guide you through credit requirements, and discuss customized financing solutions.
             </p>
+          </div>
+
+          {/* 3 Contact Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {/* Office */}
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 flex flex-col items-start shadow-sm hover:shadow-md transition-all">
+              <div className="w-14 h-14 rounded-2xl bg-emerald-600/10 border border-emerald-200 text-emerald-700 flex items-center justify-center mb-6">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div className="font-extrabold text-slate-900 text-xl mb-2">Office Address</div>
+              <div className="text-sm text-slate-600 leading-relaxed">
+                No. 3, Ifelodun Avenue, Off Magboro Road,<br />
+                Beside Wise Buyers Supermarket,<br />
+                Magboro, Ogun State, Nigeria.
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 flex flex-col items-start shadow-sm hover:shadow-md transition-all">
+              <div className="w-14 h-14 rounded-2xl bg-emerald-600/10 border border-emerald-200 text-emerald-700 flex items-center justify-center mb-6">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div className="font-extrabold text-slate-900 text-xl mb-2">Phone Number</div>
+              <a href="tel:08023157017" className="text-emerald-700 font-extrabold text-xl hover:underline mb-1">0802 315 7017</a>
+              <div className="text-xs text-slate-500 font-medium">Mon–Fri: 8AM–5PM · Sat: 9AM–2PM</div>
+            </div>
+
+            {/* Email */}
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 flex flex-col items-start shadow-sm hover:shadow-md transition-all">
+              <div className="w-14 h-14 rounded-2xl bg-emerald-600/10 border border-emerald-200 text-emerald-700 flex items-center justify-center mb-6">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div className="font-extrabold text-slate-900 text-xl mb-2">Email Address</div>
+              <a href="mailto:demfagbsglobal@gmail.com" className="text-emerald-700 font-bold text-base hover:underline break-all mb-1">demfagbsglobal@gmail.com</a>
+              <div className="text-xs text-slate-500 font-medium">Response within 24 business hours</div>
+            </div>
+          </div>
+
+          {/* Office Banner */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 p-6 lg:p-10">
+            <div className="lg:col-span-7">
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-800 relative aspect-video">
+                <Image src="/shop.jpg" alt="Demfagbs Global Finance Office — Magboro, Ogun State" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <div className="text-[10px] font-bold uppercase text-emerald-300 tracking-widest">Our Headquarters</div>
+                  <div className="text-sm font-bold">Magboro, Ogun State</div>
+                </div>
+              </div>
+            </div>
+            <div className="lg:col-span-5 text-white">
+              <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest">Visit Our Office</span>
+              <h4 className="text-2xl font-extrabold text-white tracking-tight mt-1 mb-4">Dedicated to Personal Relationship Banking</h4>
+              <p className="text-sm text-slate-400 leading-relaxed mb-8">
+                We welcome our clients and trade partners to visit our Magboro branch. Our relationship managers are ready to discuss your business capital requirements in person.
+              </p>
+              {/* <div>
+                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Connect With Us</div>
+                <div className="flex items-center gap-3">
+                  {['LinkedIn', 'Facebook', 'Instagram', 'X'].map((s, si) => (
+                    <div key={si} className="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-xs font-bold text-slate-300 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all cursor-pointer">
+                      {s.charAt(0)}
+                    </div>
+                  ))}
+                </div>
+              </div> */}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ SECTION */}
+      <section className="py-24 lg:py-32 bg-slate-50 border-t border-slate-200/80">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">Common Questions</h2>
+            <h3 className="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions</h3>
+          </div>
+
+          <div className="space-y-3">
+            {faqs.map((faq, i) => {
+              const isOpen = openFaq === i;
+              return (
+                <div
+                  key={i}
+                  className={`rounded-2xl border transition-all ${isOpen ? 'bg-white border-emerald-300/60 shadow-md' : 'bg-white border-slate-200/80'}`}
+                >
+                  <button
+                    onClick={() => setOpenFaq(isOpen ? null : i)}
+                    className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none"
+                  >
+                    <span className="font-bold text-slate-900 text-base">{faq.q}</span>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-200 ${isOpen ? 'bg-emerald-600 text-white rotate-180' : 'bg-slate-100 text-slate-500'}`}>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                  </button>
+                  {isOpen && (
+                    <div className="px-6 pb-6 pt-1 border-t border-slate-100 text-sm text-slate-600 leading-relaxed">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

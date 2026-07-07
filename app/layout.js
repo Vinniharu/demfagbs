@@ -14,8 +14,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "DEMFAGBS Global Finance & Co. Ltd.",
-  description: "Empowering MSMEs and Individuals with Accessible Microfinance Solutions. Licensed financing company dedicated to providing microloans and short-term credit across the Lagos-Ibadan Expressway corridor.",
+  metadataBase: new URL('https://demfagbs.vercel.app'),
+  title: {
+    default: 'Demfagbs Global Finance & Co. Ltd | MSME Loans & Working Capital',
+    template: '%s | Demfagbs Global Finance & Co. Ltd',
+  },
+  description: 'Demfagbs Global Finance provides accessible credit and financial solutions to micro, small, and medium-scale enterprises (MSMEs) across Ogun State, Lagos, and Oyo — helping Nigerian small businesses grow.',
+  openGraph: {
+    type: 'website',
+    locale: 'en_NG',
+    siteName: 'Demfagbs Global Finance & Co. Ltd',
+  },
 };
 
 export default function RootLayout({ children }) {
