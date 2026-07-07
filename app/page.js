@@ -134,7 +134,7 @@ export default function Home() {
               </div>
               {/* Decorative accent */}
               <div className="absolute -bottom-4 -left-4 w-28 h-28 rounded-2xl bg-emerald-50 border-4 border-white flex flex-col items-center justify-center shadow-lg">
-                <div className="text-2xl font-extrabold text-emerald-700">50+</div>
+                <div className="text-2xl font-extrabold text-emerald-700">350+</div>
                 <div className="text-[10px] font-bold text-emerald-600 uppercase text-center leading-tight">Clients<br/>Served</div>
               </div>
             </div>
